@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/home.css" />
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+          <div class="box1">
+            <div class="row1">TODAY 28 | TOTAL 234918</div>
+            <div class="row2">
+              <img src="조르디.png">
+              <p>뾰로롱의 미니 홈피 다가오는 2022년은 모두모두 행복하게♡</p>
+              <div class="profile-dropdown">
+                <div class="dropdown-btn">
+                  <div class="dropdown-title">파도타기</div>
+                  <div class="triangle-down"></div>
+                </div>
+                <div class="dropdown-content">
+                  <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                  <a href="https://www.instagram.com/coding_comu/" target="_blank"
+                    >인스타그램으로 가기</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box2">
+            <div class="row1">수달의 추억 상ㅈr 주소/나중에입력</div>
+            <div class="row2">
+              
+              <div class="date-box">
+                <div class="today">02.30<br />TUE</div>
+                <div class="date-list">
+                  <div class="date">1</div>
+                  <div class="date">2</div>
+                  <div class="date">3</div>
+                  <div class="date"><span class="color-blue">4</span></div>
+                  <div class="date"><span class="color-red">5</span></div>
+                  <div class="date">6</div>
+                  <div class="date">7</div>
+                  <div class="date">8</div>
+                  <div class="date">9</div>
+                  <div class="date">10</div>
+                  <div class="date"><span class="color-blue">11</span></div>
+                  <div class="date"><span class="color-red">12</span></div>
+                  <div class="date">13</div>
+                  <div class="date">14</div>
+                  <div class="date">15</div>
+                  <div class="date">16</div>
+                  <div class="date">17</div>
+                  <div class="date"><span class="color-blue">18</span></div>
+                  <div class="date"><span class="color-red">19</span></div>
+                  <div class="date">20</div>
+                  <div class="date">21</div>
+                  <div class="date">22</div>
+                  <div class="date">23</div>
+                  <div class="date">24</div>
+                  <div class="date"><span class="color-blue">25</span></div>
+                  <div class="date"><span class="color-red">26</span></div>
+                  <div class="date">27</div>
+                  <div class="date">28</div>
+                  <div class="date">29</div>
+                  <div class="date">30</div>
+                </div>
+              </div>
+
+              <div class="content-scroll">
+                <div class="content">
+                  <div class="content-date">2010.02.30 목 16:30</div>
+                  <div class="content-box">오늘은 열심히 싸이월드를 만들었다.<br /> 뭐 이렇게 할 게 많은가
+                  생각하면서 만들다보니, 어느새 끝나따.<br />끝일 것 같지만, 끝일까?
+                <br /><br />정말 모르겠따. 내일도 열심히 살아야겠다고 생각하고 있따.</div>
+                </div>
+                <div class="content">
+                  <div class="content-date">2010.02.29 수 15:29</div>
+                  <div class="content-box">울ㅈ ㅣ않ㄱ ㅣ<br /> 아프ㅈ ㅣ 않ㄱ ㅣ<br />씩씩ㅎrㄱ ㅣ
+                <br />억ㅈ ㅣ로라r도 웃ㄱ ㅣ<br />티ㄴ ㅐㅈ ㅣ 말ㄱ ㅣ</div>
+                </div>
+                <div class="content">
+                  <div class="content-date">2010.02.28 화 12:19</div>
+                  <div class="content-box">난... ㄱ ㅏ끔<br />눈물을 흘린ㄷ ㅏ...<br />ㄱ ㅏ끔은 눈물을 참을 수 없는 ㄴ ㅐ가 별루ㄷ ㅏ...
+                <br />맘이 ㅇ ㅏㅍ ㅏㅅ ㅓ...<br />소ㄹ ㅣ치며... 울 수 있ㄷ ㅏ는건...<br />좋은ㄱ ㅓㅇ ㅑ...</div>
+                </div>
+                <div class="button-box">
+                  <button class="diary-button" onclick="getTextFile()">
+                    <i></i>수달의 비밀일기 보기
+                  </button>
+                </div>
+                <div class="diary-box" id="secret-box">
+                  <div class="diary-date">수달의 비밀 일기</div>
+                  <div class="diary-text" id="secret-diary"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="box3">
+            <button class="menu"><a href="홈.html">홈</a></button>
+            <button class="menu"><a href="다이어리.html">다이어리</a></button>
+            <button class="menu"><a href="사진첩.html">사진첩</a></button>
+            <button class="menu"><a href="방명록.html">방명록</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function getTextFile() {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function (event) {
+          processFile(event.target.files[0]);
+        };
+        input.click();
+      }
+
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function () {
+          document.getElementById("secret-diary").innerText = reader.result;
+          document.getElementById("secret-box").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

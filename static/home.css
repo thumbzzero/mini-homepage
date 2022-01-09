@@ -1,0 +1,321 @@
+/** 미니홈피 내용이 들어갈 연회색 네모박스 만들기 */
+.page {
+  background-color: #eeeeee;
+  border-radius: 9px;
+
+  /** bookdot div 기준으로 상하좌우 10px씩 떨어져있는 위치에 고정 */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+
+  display: flex;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  
+  margin: 10px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  flex: 0.65;
+  
+  margin: 10px;
+  margin-right: 0;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  flex: 0.1;
+  /*border: 2px solid gray;*/
+  border-radius: 9px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-top: 70px;
+}
+
+.row1 {
+  flex: 0.1;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.row2 {
+  flex: 0.9;
+  border-radius: 9px;
+  border: 2px solid lightgray;
+  display: flex;
+  flex-direction: column;
+}
+
+.pictitle {
+  background-color: gray;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+.pics {
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+}
+
+.pics>img {
+  width: 95%;
+  display: block;
+  margin: 10px auto;
+}
+
+.pics>p {
+  margin-bottom: 50px;
+}
+
+.content1 {
+  flex: 0.3;
+}
+
+.content2 {
+  flex: 0.7;
+}
+
+.content2 img {
+  width: 500px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin: 10px;
+
+}
+
+h1 {
+  color: cornflowerblue;
+  display: block;
+  border-bottom: 1px solid gray;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  background-color: cornflowerblue;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid gray;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+button:active {
+  background-color: blue;
+}
+
+.pic {
+  display: inline;
+  background-color: #f76666;
+  border-radius: 7px;
+  margin-left: 5px;
+  padding: 3px 7px;
+  color: white;
+}
+
+.board {
+  display: inline;
+  background-color: #3b3b92;
+  border-radius: 7px;
+  margin-left: 5px;
+  padding: 3px 7px;
+  color: white;
+  
+}
+
+.mar {
+  margin-top: 10px;
+}
+
+.date-box {
+  /*position: absolute;*/
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  height: 3rem;
+  margin: 15px;
+
+  border: 1px solid #e7e7e7;
+
+  display: flex;
+  align-items: center;
+}
+
+.today {
+  flex: 0 0 2rem;
+  margin: 0 1rem;
+  text-align: center;
+  color: #3b87ab;
+  font-weight: 700;
+}
+
+.date-list {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.date {
+  flex: 0 0 1.5rem;
+  color: #707070;
+  cursor: pointer;
+  text-align: center;
+}
+
+.scroll-box {
+  position: absolute;
+  margin-top: 4rem;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  overflow: auto;
+}
+
+.color-red {
+	color: red;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.content-scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 470px;
+}
+
+.content {
+  margin: 15px;
+  border: 1px solid #e7e7e7;
+}
+
+.content-date {
+  color: #3b87ab;
+  padding: 15px;
+}
+
+.content-box {
+  text-align: center;
+  padding: 15px;
+}
+
+.diary-button {
+  margin-top: 1rem;
+  margin: 20px 150px;
+  padding: 1rem;
+  background-color: #eeeeee;
+  text-align: center;
+  color: #eeeeee;
+  cursor: pointer;
+
+  transition: 800ms ease all;
+  border: none;
+}
+
+.diary-button:hover {
+  background-color: limegreen;
+}
+
+#secret-box {
+  display: none;
+}
+
+
+.diary-text {
+  text-align: center;
+}
+
+.diary-date {
+  font-size: 0.8rem;
+  color: #3b87ab;
+  margin-bottom: 1rem;
+}
+
+.diary-box {
+  border: 1px solid #e7e7e7;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.guestbook {
+  overflow: auto;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 500px;
+  margin: 10px;
+}
+
+.guestbook-title {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.guestbook-title > span {
+  margin-right: 0.5rem;
+}
+
+.guest-name {
+  color: blue;
+}
+
+.guestbook-contents {
+  display: flex;
+  padding: 1.5rem 0;
+}
+.guestbook-image {
+  flex: 0 0 8rem;
+  height: 8rem;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-1 {
+  background-image: url(./images/background1.jpg);
+}
+
+.guestbook-image > img {
+  width: 80%;
+}
+
+.guestbook-memo {
+  flex: 1;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  line-height: 1.5;
+}
